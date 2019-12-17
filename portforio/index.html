@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>プログラマー SATO MASARU</title>
+	<script src="https://kit.fontawesome.com/9c1ef3b8bf.js" crossorigin="anonymous"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- JS -->
+	<!-- JQueryダウンロードする（リンク先一例です） -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+	<!-- 背景アニメーション部 -->
+	<div class="background_animation">
+		<div class="bg_triangle"></div>
+		<div class="bg_square"></div>
+		<div class="bg_hexagon"></div>
+	</div>
+	
+	<!-- header -->
+	<header>
+			<!-- <a href="#">SATOMASARU.jp ※トップ端に固定する</a> -->
+		<div class="left">
+			<p class="site-title-sub">WELCOME TO MY PAGE</p>
+			<h1 class="site-title">はじめまして、佐藤大と申します。</h1>
+			<div class="relative">
+				<p>フリーランスプログラマーの佐藤大です。<br>
+					HTML・CSS・JavaScript・PHPを扱いHP制作などをしております。<br>
+					お気軽にお問い合わせください。</p>
+				<div class="circle"></div>
+				<div class="triangle"></div>
+			</div>
+			<p class="site-description">Check out some of my works.</p>
+			<div class="buttons">
+				<a class="button" href="#works">LEARN MORE</a>
+				<a class="button button-showy" href="#contact">SEND MESSAGE</a>
+			</div>
+		</div>	
+		
+		<div class="right">
+			<div class="picture">
+				<img src="image/profile.png" width=400px>
+			</div>
+			<div class="textbox">
+				<p class="vertical">HP制作承ります！</p>
+			</div>	
+		</div>
+	</header>
+
+	<!-- main -->
+	<!-- sectionはid、その他整形などの部分はclassにしておくと、js・cssによる調整でダブりなどが減り楽-->
+	<main>
+		<section class="works" id="works">
+			<h2 class="heading">WORKS</h2>
+			<div class="works-wrapper">
+				<div class="work-box tree">
+					<img class="work-image" src="image/band.png" alt="制作事例1">
+					<div class="work-description">
+						<div class="work-description-inner">
+							<p class="work-text">
+								バンドHP<br>
+								使用ツール：HTML,CSS,JavaScript,PHP<br>
+								<a href="#" class="button button-ghost">READ MORE</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="work-box building">
+					<img class="work-image" src="image/band.png" alt="制作事例2">
+					<div class="work-description">
+						<div class="work-description-inner">
+							<p class="work-text">
+								サークルHP<br>
+								使用ツール：HTML,CSS,JavaScript,PHP<br>
+								<a href="#" class="button button-ghost">READ MORE</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="work-box lake">
+					<img class="work-image" src="image/band.png" alt="制作事例3">
+					<div class="work-description">
+						<div class="work-description-inner">
+							<p class="work-text">
+								ライブバーHP制作中。<br>
+								使用ツール：XXX, XXX, XXX<br>
+								<a href="#" class="button button-ghost">READ MORE</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="work-box sky">
+					<img class="work-image" src="image/band.png" alt="制作事例4">
+					<div class="work-description">
+						<div class="work-description-inner">
+							<p class="work-text">
+								サロンHP制作中。<br>
+								使用ツール：XXX, XXX, XXX<br>
+								<a href="#" class="button button-ghost">READ MORE</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</section>
+	
+		<!-- skill -->
+		<section class="skills">
+			<h2 class="heading">MY SKILLS</h2>
+			<div class="skills-wrapper">
+				<div class="skill-box">
+					<i class="skill-icon fas fa-guitar"></i>
+					<div class="skill-title">MUSIC</div>
+					<p class="skill-text">
+						作詞作曲。<br>
+						オリジナルバンドでライブ&PV制作経験。<br>
+					</p>
+				</div>
+				<div class="skill-box">
+					<i class="skill-icon fas fa-tasks"></i>
+					<div class="skill-title">MANAGE</div>
+					<p class="skill-text">
+						社会人音楽サークルの主催をしております。<br>
+						<!-- 現在参加者数は約80名です。<br> -->
+					</p>
+				</div>
+				<div class="skill-box">
+					<i class="skill-icon fa fa-code"></i>
+					<div class="skill-title">CODING</div>
+					<p class="skill-text">
+						HTML/CSSコーディングを行います。<br>
+						JavaScript/PHPを扱います。<br>
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- contact -->
+		<section class="contact" id="contact">
+			<h2 class="heading">CONTACT</h2>
+			<form class="contact-form">
+				<input type="text" name="name" placeholder="NAME">
+				<textarea name="message" placeholder="MESSAGE"></textarea>
+				<input type="submit" value="SEND">
+			</form>
+		</section>
+	</main>
+	<footer class="footer">
+		© sample site
+	</footer>
+	<script src="lib/placeholders.min.js"></script>
+</body>
+</html> 
