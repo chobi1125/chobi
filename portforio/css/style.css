@@ -69,12 +69,87 @@ body{
   background-color: rgba(255, 255, 255, 0.15);
 }
 /* --------------------------------
+ * 背景アニメーション
+ * -------------------------------- */
+.bg_animation {
+  
+}
+.bg_animebox {
+  float:left;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 147, 255, 0.78);
+  animation: rotation 2s ease 0s infinite alternate none running; 
+}
+
+@keyframes rotation {
+  0% {
+    transform: scale(.3);
+  }
+
+  50% {
+    transform: scale(.1) rotate(-180deg);
+    background: rgba(29, 255, 0, 0.6);
+  }
+
+  100% {
+    transform: scale(.9) rotate(180deg);
+    background: rgba(255, 186, 0, 0.45);
+  }
+}
+.bg_triangle {
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 43.3px 25px;
+  border-color: transparent transparent rgba(211, 230, 226, 0.47) transparent;
+  transition: all 1000ms 0s ease;
+}
+.bg_triangle:hover {
+  float: left;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 25px 43.3px 25px;
+  border-color: transparent transparent rgba(0, 245, 255, 0.47) transparent;
+}
+.bg_circle {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(158, 135, 235, 0.55);/*背景色*/
+  transition: all 1000ms 0s ease;
+}
+.bg_circle:hover {
+  transform: rotateY(360deg);
+  background: rgba(226, 111, 27, 0.55);/*背景色*/
+}
+.bg_square {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: rgba(238, 255, 34, 0.47);
+  transition: all 1000ms 0s ease;
+}
+.bg_square:hover {
+  float: left;
+  width: 700px;
+  height: 50px;
+  background: rgba(9, 235, 87, 0.6);
+}
+.clear {
+  clear: both;
+}
+/* --------------------------------
  * header
  * -------------------------------- */
 header {
-  width: 100%;
+  width: 90%;
   height: 500px;
-  padding: 170px 80px;  /* 170pxで上に余白を作っている */
+  padding: 170px 0 80px;  /* 170pxで上に余白を作っている */
+  margin: 0 auto;
 }
 .left {
   float: left;
@@ -93,7 +168,7 @@ header {
 .site-title-sub::after {
   content: '';
   display: inline-block;
-  width: 140px;
+  width: 70px;
   height: 2px;
   margin: 0 30px;
   background-color: rgb(0, 0, 0);
@@ -129,7 +204,7 @@ header {
 .circle {
   position: absolute;
   top: -10px;
-  left: 600px;
+  left: 100px;
   float: left;
   width:200px;
 	height:100px;
@@ -138,19 +213,21 @@ header {
 	-moz-border-radius: 100px / 50px;	/* 高さ÷2 */
 	-webkit-border-radius: 100px / 50px;
 	border-radius: 100px / 50px;
-  z-index: -1;
+  z-index: -2;
+  opacity: 0.7;
 }
 .triangle {
   position: absolute;
-  top: -20px;
-  left: 750px;
+  top: -30px;
+  left: 250px;
   width: 0;
 	height: 0;
 	border-top: 50px solid transparent;
 	border-bottom: 50px solid transparent;
-  border-left: 100px double #81C7D4;
+  border-left: 100px double rgba(129, 199, 212, 0.48);
   /* border: dotted 2px black ; */
-  z-index: 1;
+  z-index: -1;
+/*  opacity: 0.4;*/
 }
 /* --------------------------------
  * works P164参照
@@ -261,7 +338,7 @@ header {
   border-radius: 50%;
   color: #f1b400;
   font-size: 8rem;
-  line-height: 142px;
+  /* line-height: 142px; */
 }
 .skill-title {
   margin: 0 20px 20px;
@@ -271,7 +348,9 @@ header {
   margin: 0 20px;
   line-height: 2;
 }
-
+.fas {
+  line-height: 142px;
+}
 
 /* --------------------------------
  * contact
@@ -288,7 +367,8 @@ header {
 .contact-form input[type=text],
 .contact-form textarea {
   display: block;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   margin-bottom: 10px;
   padding: 15px;
   outline: none;
@@ -321,15 +401,7 @@ header {
 /* --------------------------------
  * smart phone
  * -------------------------------- */
- @media (max-width: 1140px) {
-  body {
-    background-image: none;
-  }
-  .textbox {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   body {
     font-size: 1.3rem;
   }
@@ -340,7 +412,6 @@ header {
   .button:hover {
     opacity: 1;
   }
-
   /* --- header --- */
   header {
     padding: 60px 0 0 0;
@@ -365,11 +436,41 @@ header {
     text-align: center;
     margin: 0 auto;
   }
-  .right {
+  .right{
     display: none;
   }
-  .picture {
+/*
+  .textbox{
     display: none;
+  }
+*/
+  .circle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    float: left;
+    width:200px;
+    height:100px;
+    background:white;
+    border: dotted 2px #81C7D4 ;
+    -moz-border-radius: 100px / 50px;	/* 高さ÷2 */
+    -webkit-border-radius: 100px / 50px;
+    border-radius: 100px / 50px;
+    z-index: -2;
+    opacity: 0.7;
+  }
+  .triangle {
+    position: absolute;
+    top: -20px;
+    left: 140px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px double #81C7D4;
+    /* border: dotted 2px black ; */
+    z-index: -1;
+    opacity: 0.4;
   }
 
   /* --- about --- */
@@ -425,8 +526,15 @@ header {
 
 /* --------------------------------
  * 質問
+ ■12/18
  ①レスポンシブデザインにした際にheaderが中央に寄らない。
+ ⇒paddingの設定が厄介。左詰めで適用される性質がある。
  ②FontAwesomeでアイコンが中央からずれることがある。
- *メモ
+ ⇒ネット上(URL)から取り込むものは別途CSSが適用されて読み込まれてしまうケースがある。
+ ■12/25
+ ①画像の縮小方法※レスポンシブ時
+ ②site-title-sub のプロパティに関して
  width note1574 desk1920
+《課題》
+
  * -------------------------------- */
